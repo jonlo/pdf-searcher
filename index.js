@@ -33,21 +33,16 @@ const searchInText = () => {
   };
 
   function areWordsInString(words, str) {
-    // Normalize the input string to remove accents
     const normalizedStr = str
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
-
-    // Normalize and lowercase each word in the array
     const normalizedWords = words.map((word) =>
       word
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .toLowerCase()
     );
-
-    // Check if each word exists in the string
     return normalizedWords.every((word) => normalizedStr.includes(word));
   }
 
