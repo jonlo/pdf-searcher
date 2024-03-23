@@ -1,4 +1,3 @@
-///PDF PARSER
 const PDF = require("pdf-parse");
 const fs = require("fs");
 
